@@ -58,3 +58,33 @@ body {
 html {
   font-size: 16px;
 }
+
+/* .botonMusica{
+  background-image: url("/play.svg");
+  height: 50px;
+  width: 50px;
+} */
+
+.botonMusica{
+  background-color: transparent;
+  border: 1px solid #00000000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Agregar el icono como fondo */
+.botonMusica::before {
+  content: '';
+  background-image: url('/play.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
