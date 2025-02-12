@@ -1,0 +1,60 @@
+@import "leaflet/dist/leaflet.css";
+
+@font-face {
+  font-family: 'Hand';
+  src: url('/Hand.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9e2e6;
+  background-image: url("/background2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.papel {
+  position: relative;
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 7 / 10; 
+  background-image: url('/papel2.png');
+  background-size: cover;
+}
+
+.texto {
+  position: absolute;
+  top: 25%;
+  left: 18%;
+  text-align: center;
+  width: 70%;
+  font-family: 'Hand';
+  font-size: 18px;
+  font-size: clamp(13px, 1.8vw, 18px);
+  transform: none; 
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  white-space: pre-line;
+}
+
+html {
+  font-size: 16px;
+}
