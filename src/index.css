@@ -28,16 +28,13 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  /* Prevents elements from touching screen edges */
   box-sizing: border-box;
 }
 
 .papel {
   position: relative;
   width: max(50vw, 400px);
-  /* Ensures it's big enough on larger screens */
   max-width: 600px;
-  /* Prevents it from becoming too big */
   height: auto;
   aspect-ratio: 7 / 10;
   background-image: url('/papel2.png');
@@ -49,24 +46,16 @@ body {
 .texto {
   position: absolute;
   top: 20%;
-  /* Moves text higher to prevent bottom overflow */
   left: 18%;
-  /* Centers text properly */
   text-align: center;
   width: 70%;
-  /* Prevents text from touching the edges */
   max-height: 70%;
-  /* Ensures text doesn't overflow bottom */
   overflow: hidden;
-  /* Hides any extra text that overflows */
   font-family: 'Hand';
   font-size: clamp(10px, 2.3vw, 18px);
-  /* Responsive text size */
   line-height: 1.3;
-  /* Adjusts spacing for better fit */
   white-space: pre-line;
   word-wrap: break-word;
-  /* Prevents long words from overflowing */
 }
 
 .texto {
@@ -81,9 +70,19 @@ html {
   font-size: 16px;
 }
 
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+
 .imagenCarta {
   height: 40%;
   width: 60%;
+  animation: shake 0.5s ease-in-out infinite;
 }
 
 .botonCarta {
